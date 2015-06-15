@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>PlatformerGame</title>
@@ -441,10 +441,10 @@ $(document).ready(function() {
 	promises.push(dataFileDeferredObject.promise()); 
 
     // add the main asm.js file which is fetched and decoded by a library.
-    addLog("Starting download and decoding of PlatformerGame-HTML5-Shipping-asm.packed.js");
+    addLog("Starting download, decode and compile of PlatformerGame-HTML5-Shipping-asm.packed.js");
     promises.push(
         unpackAsmJS('PlatformerGame-HTML5-Shipping-asm.packed.js').then(function(unpackedAsmModule) {
-            addLog("PlatformerGame-HTML5-Shipping-asm.packed.js downloaded and decoded");
+            addLog("PlatformerGame-HTML5-Shipping-asm.packed.js downloaded, decoded and compiled");
             window['asmModule'] = unpackedAsmModule;
             return download('PlatformerGame-HTML5-Shipping-glue.js');
         })
